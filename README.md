@@ -1,4 +1,4 @@
-# nextjs2rce
+# nextjs2rce CVE-2025-55182
 ## using
 ```
 # install requirements
